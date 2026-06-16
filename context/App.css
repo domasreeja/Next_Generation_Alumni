@@ -1,0 +1,121 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+/* =========================
+   ADVANCED ANIMATED BACKGROUND
+========================= */
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #0f172a; /* deep navy */
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Background container */
+.animated-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+/* Glowing blobs */
+.animated-bg span {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(
+    circle,
+    rgba(99, 102, 241, 0.45),
+    rgba(99, 102, 241, 0.05)
+  );
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: moveBlob 25s linear infinite;
+}
+
+/* Different positions */
+.animated-bg span:nth-child(1) {
+  top: -10%;
+  left: -10%;
+}
+.animated-bg span:nth-child(2) {
+  top: 60%;
+  left: 10%;
+  animation-duration: 30s;
+}
+.animated-bg span:nth-child(3) {
+  top: 20%;
+  right: -10%;
+  animation-duration: 35s;
+}
+.animated-bg span:nth-child(4) {
+  bottom: -20%;
+  right: 20%;
+  animation-duration: 40s;
+}
+
+/* Animation */
+@keyframes moveBlob {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(120px, -120px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.portal-logo{
+  font-size:28px;
+  font-weight:700;
+  letter-spacing:1px;
+  color:#60a5fa;
+  margin-bottom:25px;
+
+  text-shadow:
+    0 0 8px rgba(96,165,250,0.8),
+    0 0 18px rgba(96,165,250,0.6);
+}
